@@ -1,0 +1,34 @@
+﻿@*@model List<MVC_CodefirstStoreProcedure.Models.TariheGoreKitaplar_class> buna gerek kalmadı diğer modelin içinde kitap tarihleri var*@
+@model List<MVC_CodefirstStoreProcedure.Models.KitapBilgi>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+
+    <table>
+        <tr>
+            <b>Yayın Tarihi</b>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td> @(item.YayinTarihi+" - "+ item.KitapAdı ) </td>
+            </tr>
+
+        }
+
+    </table>
+
+</head>
+<body>
+    <div> 
+    </div>
+</body>
+</html>
