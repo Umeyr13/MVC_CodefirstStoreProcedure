@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
+using MVC_CodefirstStoreProcedure.Migrations;//using MVC_CodefirstStoreProcedure.Migrations; Projedeki migration kalsörünü ekledik
 
 namespace MVC_CodefirstStoreProcedure.Models
 {
@@ -11,9 +12,9 @@ namespace MVC_CodefirstStoreProcedure.Models
 
         public DatabaseContext()
         {
-            //  Database.SetInitializer(new DbIntializer());
+            //Database.SetInitializer(new DbIntializer()); Burada kendi seed ini çağırıyor biz buna bizimkinin yolunu verdik. 
 
-            Database.SetInitializer(new DbIntializer());
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<DatabaseContext,Configuration>());
 
 
         }

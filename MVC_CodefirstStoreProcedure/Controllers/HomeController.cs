@@ -20,7 +20,7 @@ namespace MVC_CodefirstStoreProcedure.Controllers
             kitap.Adı = "Varmısın?";
             kitap.Aciklama = "HomeControllerden gelen Açıklama";
             kitap.YayinTarihi = DateTime.Now.Date;
-            db.Kitaplar.Add(kitap);
+           // db.Kitaplar.Add(kitap);
             db.SaveChanges();            
            // List<TariheGoreKitaplar_class> model =db.TariheGoreKitaplar(1900,2025);
             List<KitapBilgi> model = db.KitapBilgiGetir();
